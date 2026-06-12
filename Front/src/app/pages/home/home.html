@@ -1,1 +1,232 @@
-<p>home works!</p>
+<div class="bg-[#f7f0e6] min-h-screen">
+
+    <!-- HERO -->
+
+    <section class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1447279506476-3faec8071eee?w=1600&h=900&fit=crop&auto=format"
+                alt="Pastas artesanales frescas" class="w-full h-full object-cover" />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-[#2c1a0e]/90 via-[#2c1a0e]/40 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pb-24 w-full">
+
+            <div
+                class="inline-flex items-center gap-2 border border-[#c97d3a]/50 px-4 py-1.5 rounded-sm mb-6 bg-[#2c1a0e]/20 backdrop-blur-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#c97d3a]"></span>
+
+                <span class="text-[#f7f0e6] text-xs uppercase tracking-widest">
+                    Pastas Frescas · Elaboración Diaria
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl text-[#fff8ef] leading-tight max-w-3xl"
+                style="font-family:'Playfair Display', serif; font-weight:600;">
+                Tradición italiana,
+                <br />
+                <span class="text-[#c97d3a] italic">
+                    hecha con amor.
+                </span>
+            </h1>
+
+            <p class="mt-6 text-[#f7f0e6]/80 text-lg max-w-xl leading-relaxed">
+                Pastas frescas artesanales elaboradas todos los días con harina de
+                primera calidad, huevos frescos y recetas que pasan de generación en
+                generación.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-10">
+                <a routerLink="/productos"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#b5451b] text-[#fff8ef] text-sm uppercase tracking-widest hover:bg-[#963a16] transition-colors duration-200 rounded-sm">
+                    Ver Productos →
+                </a>
+
+                <a routerLink="/contacto"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 border border-[#fff8ef]/40 text-[#fff8ef] text-sm uppercase tracking-widest hover:border-[#c97d3a]/70 hover:text-[#c97d3a] transition-colors duration-200 rounded-sm">
+                    Contactarnos
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="border-y border-[#2c1a0e]/10 bg-[#fff8ef]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            @for(feature of features; track feature.title) {
+
+            <div class="flex flex-col gap-3">
+
+                <span class="text-2xl">
+                    {{ feature.icon }}
+                </span>
+
+                <div>
+
+                    <p class="text-[#2c1a0e] text-sm" style="font-family:'Playfair Display', serif;">
+                        {{ feature.title }}
+                    </p>
+
+                    <p class="text-[#8a6a50] text-xs mt-1 leading-relaxed">
+                        {{ feature.desc }}
+                    </p>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+
+    <section class="py-24 max-w-7xl mx-auto px-4 md:px-8">
+
+        <div class="flex items-end justify-between mb-12">
+
+            <div>
+                <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-2">
+                    Elaboración del día
+                </p>
+
+                <h2 class="text-3xl md:text-4xl text-[#2c1a0e]" style="font-family:'Playfair Display', serif;">
+                    Productos Destacados
+                </h2>
+            </div>
+
+            <a routerLink="/productos"
+                class="hidden md:inline-flex items-center gap-1 text-[#8a6a50] text-sm hover:text-[#b5451b] transition-colors">
+                Ver todos →
+            </a>
+
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            @for(product of featuredProducts; track product.id) {
+
+            <div
+                class="group bg-[#fff8ef] border border-[#2c1a0e]/8 hover:border-[#b5451b]/30 hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden">
+
+                <div class="relative overflow-hidden aspect-square bg-[#ede0ce]">
+
+                    <img [src]="product.image" [alt]="product.name"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+                    <div class="absolute top-3 left-3">
+                        <span
+                            class="text-[10px] uppercase tracking-widest text-[#b5451b] bg-[#fff8ef]/90 px-2 py-1 rounded-sm">
+                            {{ product.category }}
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="p-4">
+
+                    <h3 class="text-[#2c1a0e] text-sm leading-snug" style="font-family:'Playfair Display', serif;">
+                        {{ product.name }}
+                    </h3>
+
+                    <p class="text-[#8a6a50] text-xs mt-1">
+                        {{ product.weight }}
+                    </p>
+
+                    <div class="flex items-center justify-between mt-4">
+
+                        <span class="text-[#b5451b] text-lg" style="font-family:'Playfair Display', serif;">
+                            ${{ product.price }}
+                        </span>
+
+                        <button (click)="addToCart(product)"
+                            class="px-3 py-1.5 bg-[#b5451b]/10 border border-[#b5451b]/30 text-[#2c1a0e] text-xs uppercase tracking-wider hover:bg-[#b5451b] hover:border-[#b5451b] hover:text-[#fff8ef] transition-colors duration-200 rounded-sm">
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <div class="mt-10 text-center md:hidden">
+            <a routerLink="/productos"
+                class="inline-flex items-center gap-2 text-[#b5451b] text-sm underline underline-offset-4">
+                Ver todos los productos →
+            </a>
+        </div>
+
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+
+    <section class="bg-[#fff8ef] border-t border-[#2c1a0e]/8">
+
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
+
+            <div class="relative order-2 md:order-1">
+
+                <img src="https://images.unsplash.com/photo-1606854428857-5121b55a2661?w=700&h=500&fit=crop&auto=format"
+                    alt="Elaboración artesanal" class="w-full h-72 md:h-96 object-cover rounded-sm" />
+
+                <div class="absolute -bottom-4 -right-4 bg-[#b5451b] px-6 py-4 rounded-sm hidden md:block">
+
+                    <p class="text-[#fff8ef] text-2xl font-medium" style="font-family:'Playfair Display', serif;">
+                        1987
+                    </p>
+
+                    <p class="text-[#fff8ef]/70 text-xs uppercase tracking-wider mt-0.5">
+                        desde hace 39 años
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="order-1 md:order-2">
+
+                <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-4">
+                    Nuestra historia
+                </p>
+
+                <h2 class="text-3xl md:text-4xl text-[#2c1a0e] leading-tight mb-6"
+                    style="font-family:'Playfair Display', serif;">
+                    Tres generaciones
+                    <br />
+                    <span class="italic">
+                        de sabor auténtico
+                    </span>
+                </h2>
+
+                <p class="text-[#8a6a50] leading-relaxed mb-4">
+                    La Nonna nació en 1987 cuando la abuela Rosa trajo desde Nápoles sus
+                    recetas más preciadas. Hoy su nieta continúa la tradición con la misma
+                    pasión y los mismos ingredientes.
+                </p>
+
+                <p class="text-[#8a6a50] leading-relaxed mb-8">
+                    Elaboramos pastas frescas todos los días, sin conservantes ni
+                    aditivos. Solo harina, huevos y el secreto que no se puede escribir.
+                </p>
+
+                <a routerLink="/contacto"
+                    class="inline-flex items-center gap-2 text-[#b5451b] text-sm uppercase tracking-wider">
+                    Conocé más →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

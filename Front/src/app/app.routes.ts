@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: 'inicio',
+        path: '',
         // canActivate: [AuthGuard],
         loadComponent: () => import('./pages/home/home').then(m => m.Home)
     },
