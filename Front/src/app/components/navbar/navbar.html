@@ -1,0 +1,117 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#f7f0e6]/95 backdrop-blur-sm border-b border-[#2c1a0e]/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+        <!-- Logo -->
+
+        <a routerLink="/" class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-[#b5451b] flex items-center justify-center">
+                <span class="text-[#fff8ef] text-xs font-bold" style="font-family: 'Playfair Display', serif">
+                    LN
+                </span>
+            </div>
+
+            <div>
+                <span class="text-[#2c1a0e] tracking-wider text-sm" style="font-family: 'Playfair Display', serif">
+                    Los Trigales
+                </span>
+
+                <span class="text-[#8a6a50] text-xs block leading-none tracking-widest uppercase">
+                    Fábrica de Pastas
+                </span>
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+
+        <nav class="hidden md:flex items-center gap-8">
+            @for(link of navLinks; track link.to) {
+
+            <a [routerLink]="link.to" class="text-sm uppercase tracking-wider transition-colors duration-200" [ngClass]="{
+          'text-[#b5451b]': isActive(link.to),
+          'text-[#8a6a50] hover:text-[#2c1a0e]': !isActive(link.to)
+        }">
+                {{ link.label }}
+            </a>
+
+            }
+        </nav>
+
+        <!-- Actions -->
+
+        <div class="flex items-center gap-3">
+            <!-- <button (click)="openCart()"
+                class="relative p-2 text-[#8a6a50] hover:text-[#b5451b] transition-colors duration-200">
+                🛒
+
+                @if(cartCount > 0) {
+                <span
+                    class="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#b5451b] text-[#fff8ef] text-[10px] flex items-center justify-center font-medium">
+                    {{ cartCount }}
+                </span>
+                }
+            </button> -->
+
+            <!-- @if(isLoggedIn) {
+
+            <div class="hidden md:flex items-center gap-2">
+                <span class="text-[#8a6a50] text-sm">
+                    {{ user.name.split(' ')[0] }}
+                </span>
+
+                <button (click)="logout()" class="p-2 text-[#8a6a50] hover:text-[#b5451b] transition-colors">
+                    🚪
+                </button>
+            </div>
+
+            } @else {
+
+            <button (click)="openLogin()"
+                class="hidden md:flex items-center gap-2 px-4 py-1.5 border border-[#b5451b]/50 text-[#b5451b] text-sm uppercase tracking-wider hover:bg-[#b5451b]/8 transition-colors duration-200 rounded-sm">
+                👤
+                Ingresar
+            </button>
+
+            } -->
+
+            <button class="md:hidden p-2 text-[#8a6a50] hover:text-[#2c1a0e]" (click)="toggleMobile()">
+                {{ mobileOpen ? '✕' : '☰' }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+
+    @if(mobileOpen) {
+
+    <div class="md:hidden bg-[#f7f0e6] border-t border-[#2c1a0e]/10 overflow-hidden">
+        <div class="px-4 py-4 flex flex-col gap-4">
+            @for(link of navLinks; track link.to) {
+
+            <a [routerLink]="link.to" (click)="closeMobile()" class="text-sm uppercase tracking-wider py-1" [ngClass]="{
+          'text-[#b5451b]': isActive(link.to),
+          'text-[#8a6a50]': !isActive(link.to)
+        }">
+                {{ link.label }}
+            </a>
+
+            }
+
+            <!-- @if(isLoggedIn) {
+
+            <button (click)="logout(); closeMobile()"
+                class="text-left text-sm text-[#8a6a50] uppercase tracking-wider py-1">
+                Cerrar sesión ({{ user.name }})
+            </button>
+
+            } @else {
+
+            <button (click)="openLogin(); closeMobile()"
+                class="text-left text-sm text-[#b5451b] uppercase tracking-wider py-1">
+                Ingresar
+            </button>
+
+            } -->
+        </div>
+    </div>
+
+    }
+</header>
