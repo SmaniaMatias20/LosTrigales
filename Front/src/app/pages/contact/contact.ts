@@ -39,7 +39,7 @@ export class Contact {
 
     const text =
       `*CONSULTA WEB - PEDIDO / CONTACTO*
-
+    
     Hola! Tenés una nueva consulta desde la web:
 
     *Cliente*
@@ -51,7 +51,7 @@ export class Contact {
     - ${message}
 
     ────────────────────
-    - Responder lo antes posible`;
+    Los Trigales - Una Pasta Diferente`;
 
     const url = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(text)}`;
 
