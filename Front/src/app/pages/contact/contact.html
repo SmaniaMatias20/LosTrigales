@@ -1,1 +1,168 @@
-<p>contact works!</p>
+<div class="bg-[#f7f0e6] min-h-screen pt-16">
+
+    <!-- HEADER -->
+    <div class="bg-[#fff8ef] border-b border-[#2c1a0e]/8 py-12 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-2">
+                Estamos para vos
+            </p>
+
+            <h1 class="text-4xl md:text-5xl text-[#2c1a0e]" style="font-family: 'Playfair Display', serif;">
+                Contacto
+            </h1>
+
+            <p class="text-[#8a6a50] mt-3 max-w-xl text-sm">
+                Consultanos sobre pedidos, cantidades mayoristas o pastas especiales. Te respondemos siempre.
+            </p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 grid md:grid-cols-2 gap-12">
+
+        <!-- LEFT SIDE -->
+        <div>
+            <h2 class="text-2xl text-[#2c1a0e] mb-8" style="font-family: 'Playfair Display', serif;">
+                Encontranos
+            </h2>
+
+            <div class="flex flex-col gap-6 ">
+
+                <div class="flex flex-col gap-6 mb-10">
+
+                    @for (item of info; track item.label) {
+
+                    <div class="flex items-start gap-4">
+
+                        <div
+                            class="w-9 h-9 rounded-sm bg-[#b5451b]/10 border border-[#b5451b]/20 flex items-center justify-center mt-0.5">
+                            <span class="material-icons text-[#b5451b] text-base"> {{ item.icon }} </span>
+                        </div>
+
+                        <div>
+                            <p class="text-[#8a6a50] text-xs uppercase tracking-wider mb-0.5">
+                                {{ item.label }}
+                            </p>
+
+                            <p class="text-[#2c1a0e] text-sm">
+                                {{ item.value }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+            </div>
+
+            <div class="rounded-sm overflow-hidden border border-[#2c1a0e]/8 h-48">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0569859977563!2d-58.481846011697336!3d-34.67851120312353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94e67171745%3A0xfc771791471e483c!2sLos%20Trigales%20una%20pasta%20diferente!5e0!3m2!1ses-419!2sus!4v1781645768289!5m2!1ses-419!2sus"
+                    class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div>
+
+            @if (submitted) {
+
+            <div
+                class="bg-[#fff8ef] border border-[#2c1a0e]/8 rounded-sm p-10 flex flex-col items-center justify-center text-center h-full min-h-64">
+
+                <p class="text-4xl text-[#b5451b] mb-4">✔</p>
+
+                <h3 class="text-2xl text-[#2c1a0e] mb-3" style="font-family: 'Playfair Display', serif;">
+                    ¡Mensaje recibido!
+                </h3>
+
+                <p class="text-[#8a6a50] text-sm max-w-xs">
+                    Gracias por escribirnos. Te respondemos pronto a {{ form.value.email }}.
+                </p>
+
+                <button (click)="reset()" class="mt-6 text-[#b5451b] text-xs underline underline-offset-4">
+                    Enviar otro mensaje
+                </button>
+
+            </div>
+
+            } @else {
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()"
+                class="bg-[#fff8ef] border border-[#2c1a0e]/8 rounded-sm p-8 flex flex-col gap-5">
+
+                <h2 class="text-2xl text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', serif;">
+                    Envianos un mensaje
+                </h2>
+
+                <!-- NAME + PHONE -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-[#8a6a50] text-xs uppercase tracking-widest">
+                            Nombre *
+                        </label>
+
+                        <input formControlName="name"
+                            class="w-full px-4 py-2.5 bg-[#f7f0e6] border border-[#2c1a0e]/12 text-[#2c1a0e] text-sm rounded-sm"
+                            placeholder="Tu nombre" />
+                    </div>
+
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-[#8a6a50] text-xs uppercase tracking-widest">
+                            Teléfono
+                        </label>
+
+                        <input formControlName="phone"
+                            class="w-full px-4 py-2.5 bg-[#f7f0e6] border border-[#2c1a0e]/12 text-[#2c1a0e] text-sm rounded-sm"
+                            placeholder="+54 351 ..." />
+                    </div>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-[#8a6a50] text-xs uppercase tracking-widest">
+                        Email *
+                    </label>
+
+                    <input formControlName="email" type="email"
+                        class="w-full px-4 py-2.5 bg-[#f7f0e6] border border-[#2c1a0e]/12 text-[#2c1a0e] text-sm rounded-sm"
+                        placeholder="tu@email.com" />
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-[#8a6a50] text-xs uppercase tracking-widest">
+                        Mensaje *
+                    </label>
+
+                    <textarea formControlName="message" rows="5"
+                        class="w-full px-4 py-2.5 bg-[#f7f0e6] border border-[#2c1a0e]/12 text-[#2c1a0e] text-sm rounded-sm resize-none"
+                        placeholder="¿Qué necesitás? Consultá sobre pedidos, precios mayoristas, pastas especiales..."></textarea>
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" [disabled]="loading"
+                    class="w-full py-3 bg-[#b5451b] text-[#fff8ef] text-sm uppercase tracking-widest rounded-sm disabled:opacity-60">
+
+                    @if (loading) {
+                    Enviando...
+                    } @else {
+                    Enviar Mensaje
+                    }
+
+                </button>
+
+            </form>
+
+            }
+
+        </div>
+
+    </div>
+</div>

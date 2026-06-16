@@ -17,10 +17,10 @@ export const routes: Routes = [
     //     loadComponent: () => import('./pages/about/about').then(m => m.About)
     // },
 
-    // {
-    //     path: 'contacto',
-    //     loadComponent: () => import('./pages/contact/contact').then(m => m.Contact)
-    // },
+    {
+        path: 'contacto',
+        loadComponent: () => import('./pages/contact/contact').then(m => m.Contact)
+    },
 
     {
         path: '**',
