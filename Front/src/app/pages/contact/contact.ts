@@ -23,11 +23,19 @@ export class Contact {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      name: ['', [Validators.required, Validators.maxLength(30)]],
+      email: [''],
       phone: [''],
-      message: ['', Validators.required],
+      message: ['', [Validators.required, Validators.maxLength(240)]],
     });
+  }
+
+  get f() {
+    return this.form.controls;
+  }
+
+  get messageLength(): number {
+    return this.form.get('message')?.value?.length || 0;
   }
 
   async onSubmit() {
@@ -45,7 +53,7 @@ export class Contact {
     *Cliente*
     • Nombre: ${name}
     ${phone ? `• Teléfono: ${phone}` : '• Teléfono: No dejó teléfono'}
-    • Email: ${email}
+    ${email ? `• Email: ${email}` : '• Email: No dejó email'}
 
     *Consulta*
     - ${message}
