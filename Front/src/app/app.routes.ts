@@ -7,19 +7,24 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home').then(m => m.Home)
     },
 
-    {
-        path: 'productos',
-        loadComponent: () => import('./pages/products/products').then(m => m.Products)
-    },
+    // {
+    //     path: 'productos',
+    //     loadComponent: () => import('./pages/products/products').then(m => m.Products)
+    // },
+
+    // {
+    //     path: 'nosotros',
+    //     loadComponent: () => import('./pages/about/about').then(m => m.About)
+    // },
+
+    // {
+    //     path: 'contacto',
+    //     loadComponent: () => import('./pages/contact/contact').then(m => m.Contact)
+    // },
 
     {
-        path: 'nosotros',
-        loadComponent: () => import('./pages/about/about').then(m => m.About)
-    },
-
-    {
-        path: 'contacto',
-        loadComponent: () => import('./pages/contact/contact').then(m => m.Contact)
+        path: '**',
+        loadComponent: () => import('./pages/error/error').then(m => m.Error)
     },
 
 ];

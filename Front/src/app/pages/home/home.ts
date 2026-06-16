@@ -13,6 +13,8 @@ export class Home {
     {
       id: 1,
       name: 'Tallarines Frescos',
+      description:
+        'Elaborados artesanalmente con harina seleccionada y huevos frescos.',
       price: 2400,
       weight: '500g',
       image:
@@ -22,6 +24,8 @@ export class Home {
     {
       id: 2,
       name: 'Ravioles de Ricotta y Espinaca',
+      description:
+        'Pasta rellena con una combinación suave de ricotta y espinaca fresca.',
       price: 3200,
       weight: '400g',
       image:
@@ -31,6 +35,8 @@ export class Home {
     {
       id: 3,
       name: 'Ñoquis de Papa',
+      description:
+        'Preparados con papa natural para lograr una textura suave y esponjosa.',
       price: 1800,
       weight: '500g',
       image:
@@ -40,6 +46,8 @@ export class Home {
     {
       id: 4,
       name: 'Lasagna Fresca',
+      description:
+        'Láminas de pasta fresca listas para horno, ideales para preparar una lasagna casera.',
       price: 3600,
       weight: '600g',
       image:
@@ -52,22 +60,22 @@ export class Home {
     {
       title: '100% Artesanal',
       desc: 'Elaboradas con ingredientes frescos y naturales, sin conservantes',
-      icon: '🌿',
+      icon: 'eco',
     },
     {
       title: 'Entrega el mismo día',
       desc: 'Pedí antes de las 12 y recibís en el día en toda la zona',
-      icon: '🚚',
+      icon: 'local_shipping',
     },
     {
       title: 'Receta familiar',
-      desc: 'Tres generaciones de tradición italiana en cada pasta',
-      icon: '❤️',
+      desc: 'Tres generaciones de tradición en cada pasta',
+      icon: 'favorite',
     },
     {
       title: 'Bromatología habilitada',
       desc: 'Habilitación municipal y provincial vigente',
-      icon: '🏆',
+      icon: 'verified',
     },
   ];
 
