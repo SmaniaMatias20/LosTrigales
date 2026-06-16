@@ -38,9 +38,9 @@ export class Contact {
     const { name, email, phone, message } = this.form.value;
 
     const text =
-      `- *CONSULTA WEB - PEDIDO / CONTACTO*
+      `*CONSULTA WEB - PEDIDO / CONTACTO*
 
-    - Hola! Tenés una nueva consulta desde la web:
+    Hola! Tenés una nueva consulta desde la web:
 
     *Cliente*
     • Nombre: ${name}
@@ -48,7 +48,7 @@ export class Contact {
     • Email: ${email}
 
     *Consulta*
-    ${message}
+    - ${message}
 
     ────────────────────
     - Responder lo antes posible`;
