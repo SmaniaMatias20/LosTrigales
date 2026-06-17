@@ -3,7 +3,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        // canActivate: [AuthGuard],
         loadComponent: () => import('./pages/home/home').then(m => m.Home)
     },
 
@@ -12,10 +11,10 @@ export const routes: Routes = [
     //     loadComponent: () => import('./pages/products/products').then(m => m.Products)
     // },
 
-    // {
-    //     path: 'nosotros',
-    //     loadComponent: () => import('./pages/about/about').then(m => m.About)
-    // },
+    {
+        path: 'nosotros',
+        loadComponent: () => import('./pages/about/about').then(m => m.About)
+    },
 
     {
         path: 'contacto',

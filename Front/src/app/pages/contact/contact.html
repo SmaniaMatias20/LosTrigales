@@ -44,9 +44,16 @@
                                 {{ item.label }}
                             </p>
 
+                            @if (item.label === 'Instagram') {
+                            <a href="https://instagram.com/{{ item.value }}" target="_blank"
+                                class="text-[#2c1a0e] text-sm">
+                                {{ item.value }}
+                            </a>
+                            } @else {
                             <p class="text-[#2c1a0e] text-sm">
                                 {{ item.value }}
                             </p>
+                            }
                         </div>
 
                     </div>

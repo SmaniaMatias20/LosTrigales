@@ -1,56 +1,6 @@
 <div class="bg-[#f7f0e6] min-h-screen">
 
     <!-- HERO -->
-    <!-- <section class="relative h-screen flex items-end overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="assets/images/general/banner.avif" alt="Pastas artesanales frescas"
-                class="w-full h-full object-cover" />
-
-            <div class="absolute inset-0 bg-gradient-to-t from-[#2c1a0e]/90 via-[#2c1a0e]/40 to-transparent"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pb-8 sm:pb-24 w-full">
-
-            <div
-                class="inline-flex items-center gap-2 border border-[#c97d3a]/50 px-4 py-1.5 rounded-sm mb-6 bg-[#2c1a0e]/20 backdrop-blur-sm">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#c97d3a]"></span>
-
-                <span class="text-[#f7f0e6] text-xs uppercase tracking-widest">
-                    Pastas Frescas · Elaboración Diaria
-                </span>
-            </div>
-
-            <h1 class="text-5xl md:text-7xl text-[#fff8ef] leading-tight max-w-3xl"
-                style="font-family:'Playfair Display', serif; font-weight:600;">
-                Tradición familiar,
-                <br />
-                <span class="text-[#c97d3a] italic">
-                    hecha con amor.
-                </span>
-            </h1>
-
-            <p class="mt-6 text-[#f7f0e6]/80 sm:text-lg text-sm max-w-xl leading-relaxed">
-                Pastas frescas artesanales elaboradas todos los días con harina de
-                primera calidad, huevos frescos y recetas que pasan de generación en
-                generación.
-            </p>
-
-            <div class="flex flex-wrap gap-4 mt-10">
-                <a routerLink="/productos"
-                    class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#b5451b] text-[#fff8ef] text-sm uppercase tracking-widest hover:bg-[#963a16] transition-colors duration-200 rounded-sm">
-                    Ver Productos →
-                </a>
-
-                <a routerLink="/contacto"
-                    class="inline-flex items-center gap-2 px-8 py-3.5 border border-[#fff8ef]/40 text-[#fff8ef] text-sm uppercase tracking-widest hover:border-[#c97d3a]/70 hover:text-[#c97d3a] transition-colors duration-200 rounded-sm">
-                    Contactarnos
-                </a>
-            </div>
-
-        </div>
-    </section> -->
-
-    <!-- HERO -->
     <section class="relative h-screen flex items-center overflow-hidden pt-16">
 
         <!-- Imagen de fondo -->
@@ -100,7 +50,11 @@
                 <a routerLink="/productos"
                     class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 bg-[#b5451b] text-[#fff8ef] text-xs sm:text-sm uppercase tracking-widest hover:bg-[#963a16] transition-colors duration-200 rounded-sm">
 
-                    Ver Productos →
+                    Ver Productos
+
+                    <span class="material-icons text-sm">
+                        arrow_forward
+                    </span>
                 </a>
 
                 <a routerLink="/contacto"
@@ -230,67 +184,83 @@
 
     </section>
 
-    <!-- NUESTRA HISTORIA -->
-
+    <!-- ELABORACIÓN DIARIA -->
     <section class="bg-[#fff8ef] border-t border-[#2c1a0e]/8">
 
         <div class="max-w-7xl mx-auto px-4 md:px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
 
+            <!-- Imagen -->
             <div class="relative order-2 md:order-1">
 
-                <img src="assets/images/general/history.avif" alt="Elaboración artesanal"
+                <img src="assets/images/general/make.png" alt="Pastas frescas elaboradas en el día"
                     class="w-full h-72 md:h-96 object-cover rounded-sm" />
 
                 <div class="absolute -bottom-4 -right-4 bg-[#b5451b] px-6 py-4 rounded-sm hidden md:block">
 
                     <p class="text-[#fff8ef] text-2xl font-medium" style="font-family:'Playfair Display', serif;">
-                        1958
+                        Frescas
                     </p>
 
                     <p class="text-[#fff8ef]/70 text-xs uppercase tracking-wider mt-0.5">
-                        desde hace 68 años
+                        todos los días
                     </p>
 
                 </div>
 
             </div>
 
+            <!-- Texto -->
             <div class="order-1 md:order-2">
 
                 <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-4">
-                    Nuestra historia
+                    Elaboración diaria
                 </p>
 
                 <h2 class="text-3xl md:text-4xl text-[#2c1a0e] leading-tight mb-6"
                     style="font-family:'Playfair Display', serif;">
-                    Tres generaciones
+                    Hechas hoy,
                     <br />
                     <span class="italic">
-                        de sabor auténtico
+                        listas para tu mesa
                     </span>
                 </h2>
 
                 <p class="text-[#8a6a50] leading-relaxed mb-4">
-                    Los Trigales nació en el corazón de Villa Lugano gracias al esfuerzo y la dedicación
-                    del abuelo Raúl, quien comenzó elaborando pastas frescas de manera artesanal para su
-                    familia y vecinos. Con el paso de los años, su pasión por la cocina y la calidad de
-                    sus productos se transformó en una tradición que continúa vigente hasta el día de hoy.
+                    En Los Trigales elaboramos nuestras pastas frescas todos los días,
+                    cuidando cada masa, cada relleno y cada detalle para que disfrutes
+                    productos recién hechos, con sabor casero y calidad artesanal.
                 </p>
 
                 <p class="text-[#8a6a50] leading-relaxed mb-8">
-                    Elaboramos pastas frescas todos los días, sin conservantes ni
-                    aditivos. Solo harina, huevos y el secreto que no se puede escribir.
+                    Ravioles, tallarines, ñoquis, canelones y muchas variedades más,
+                    preparadas para acompañar almuerzos familiares, cenas especiales o
+                    cualquier momento en el que quieras comer rico.
                 </p>
 
-                <a routerLink="/contacto"
-                    class="inline-flex items-center gap-2 text-[#b5451b] text-sm uppercase tracking-wider">
-                    Conocé más →
-                </a>
+                <div class="flex flex-col sm:flex-row gap-3">
+
+                    <a routerLink="/productos"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#b5451b] text-[#fff8ef] text-xs uppercase tracking-widest hover:bg-[#963a16] transition-colors duration-200 rounded-sm">
+
+                        Ver Productos
+
+                        <span class="material-icons text-sm">
+                            arrow_forward
+                        </span>
+                    </a>
+
+                    <a routerLink="/contacto"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#b5451b]/40 text-[#2c1a0e] text-xs uppercase tracking-widest hover:border-[#b5451b] hover:text-[#b5451b] transition-colors duration-200 rounded-sm">
+
+                        Consultar
+
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
     </section>
-
 </div>
