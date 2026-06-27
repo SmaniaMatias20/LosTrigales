@@ -1,1 +1,120 @@
-<p>products works!</p>
+<div class="bg-[#f7f0e6] min-h-screen pt-16">
+
+    <!-- HEADER -->
+    <div class="bg-[#fff8ef] border-b border-[#2c1a0e]/8 py-12 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-2">
+                Catálogo
+            </p>
+
+            <h1 class="text-4xl md:text-5xl text-[#2c1a0e]" style="font-family: 'Playfair Display', serif">
+                Nuestras Pastas
+            </h1>
+
+            <p class="text-[#8a6a50] mt-3 max-w-xl text-sm leading-relaxed">
+                Elaboradas fresco cada día. Sin conservantes, sin aditivos.
+                Solo ingredientes seleccionados y la receta de siempre.
+            </p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-10">
+
+        <!-- FILTROS -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+
+            <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-[#8a6a50] text-sm">☰</span>
+
+                <button *ngFor="let category of categories" type="button" (click)="selectCategory(category)"
+                    class="px-4 py-1.5 text-xs uppercase tracking-wider rounded-sm border transition-colors duration-200"
+                    [ngClass]="
+            selectedCategory === category
+              ? 'bg-[#b5451b] border-[#b5451b] text-[#fff8ef]'
+              : 'border-[#2c1a0e]/15 text-[#8a6a50] hover:border-[#b5451b]/40 hover:text-[#2c1a0e] cursor-pointer'
+          ">
+                    {{ category }}
+                </button>
+            </div>
+
+            <select [(ngModel)]="sortBy"
+                class="bg-[#fff8ef] border border-[#2c1a0e]/12 text-[#8a6a50] text-xs px-3 py-2 rounded-sm focus:outline-none focus:border-[#b5451b]/40 cursor-pointer">
+                <option value="default">Ordenar por defecto</option>
+                <option value="az">Nombre: A-Z</option>
+                <option value="za">Nombre: Z-A</option>
+            </select>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <div *ngFor="let product of filteredProducts"
+                class="group bg-[#fff8ef] border rounded-sm overflow-hidden transition-all duration-300 animate-fade-up"
+                [ngClass]="
+          product.stock
+            ? 'border-[#2c1a0e]/8 hover:border-[#b5451b]/30 hover:shadow-md'
+            : 'border-[#2c1a0e]/8 opacity-65'
+        ">
+
+                <!-- IMAGEN -->
+                <div class="relative overflow-hidden aspect-square bg-[#ede0ce]">
+                    <img [src]="product.image" [alt]="product.name"
+                        class="w-full h-full object-cover transition-transform duration-500"
+                        [ngClass]="product.stock ? 'group-hover:scale-105' : 'grayscale'" />
+
+                    <div class="absolute top-3 left-3 flex gap-2">
+                        <span
+                            class="text-[10px] uppercase tracking-widest text-[#b5451b] bg-[#fff8ef]/90 px-2 py-1 rounded-sm">
+                            {{ product.category }}
+                        </span>
+
+                        <span *ngIf="!product.stock"
+                            class="text-[10px] uppercase tracking-widest text-[#8a6a50] bg-[#ede0ce]/90 px-2 py-1 rounded-sm">
+                            Agotado
+                        </span>
+                    </div>
+                </div>
+
+                <!-- INFO -->
+                <div class="p-4">
+                    <h3 class="text-[#2c1a0e] text-sm leading-snug" style="font-family: 'Playfair Display', serif">
+                        {{ product.name }}
+                    </h3>
+
+                    <!-- <p class="text-[#8a6a50] text-xs mt-1">
+                        {{ product.weight }}
+                    </p> -->
+
+                    <p class="text-[#8a6a50]/80 text-xs mt-2 leading-relaxed line-clamp-2">
+                        {{ product.description }}
+                    </p>
+
+                    <!-- <div class="flex items-center justify-between mt-4">
+                        <span class="text-[#b5451b] text-lg" style="font-family: 'Playfair Display', serif">
+                            ${{ product.price.toLocaleString('es-AR') }}
+                        </span>
+
+                        <button type="button" (click)="handleAddToCart(product)" [disabled]="!product.stock"
+                            class="flex items-center gap-1.5 px-3 py-1.5 text-xs uppercase tracking-wider rounded-sm transition-colors duration-200"
+                            [ngClass]="
+                product.stock
+                  ? 'bg-[#b5451b]/10 border border-[#b5451b]/30 text-[#2c1a0e] hover:bg-[#b5451b] hover:border-[#b5451b] hover:text-[#fff8ef]'
+                  : 'bg-[#ede0ce] border border-[#ede0ce] text-[#c8b49a] cursor-not-allowed'
+              ">
+                            <span>🛒</span>
+                            {{ product.stock ? 'Agregar' : 'Sin stock' }}
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SIN RESULTADOS -->
+        <div *ngIf="filteredProducts.length === 0" class="text-center py-20">
+            <p class="text-[#8a6a50] text-sm">
+                No hay productos en esta categoría.
+            </p>
+        </div>
+
+    </div>
+</div>

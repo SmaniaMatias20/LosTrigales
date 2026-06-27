@@ -68,8 +68,8 @@
         </div>
 
     </section>
-    <!-- FEATURES -->
 
+    <!-- FEATURES -->
     <section class="border-y border-[#2c1a0e]/10 bg-[#fff8ef]">
         <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
 
@@ -101,8 +101,7 @@
     </section>
 
     <!-- PRODUCTOS DESTACADOS -->
-
-    <section class="py-24 max-w-7xl mx-auto px-4 md:px-8">
+    <section class="sm:py-24 max-w-7xl mx-auto px-4 md:px-8">
 
         <div class="flex items-end justify-between mb-12">
 
@@ -117,8 +116,13 @@
             </div>
 
             <a routerLink="/productos"
-                class="hidden md:inline-flex items-center gap-1 text-[#8a6a50] text-sm hover:text-[#b5451b] transition-colors">
-                Ver todos →
+                class="group hidden md:inline-flex items-center gap-1 text-[#8a6a50] text-sm hover:text-[#b5451b] transition-colors">
+                Ver todos
+
+                <span
+                    class="material-icons text-base leading-none transition-transform duration-200 group-hover:translate-x-1">
+                    arrow_forward
+                </span>
             </a>
 
         </div>
@@ -175,19 +179,24 @@
 
         </div>
 
-        <div class="mt-10 text-center md:hidden">
+        <!-- <div class="mt-10 text-center md:hidden">
             <a routerLink="/productos"
-                class="inline-flex items-center gap-2 text-[#b5451b] text-sm underline underline-offset-4">
-                Ver todos los productos →
+                class="group inline-flex items-center gap-2 text-[#b5451b] text-sm underline underline-offset-4">
+                Ver todos los productos
+
+                <span
+                    class="material-icons text-sm leading-none transition-transform duration-200 group-hover:translate-x-1">
+                    arrow_forward
+                </span>
             </a>
-        </div>
+        </div> -->
 
     </section>
 
     <!-- ELABORACIÓN DIARIA -->
-    <section class="bg-[#fff8ef] border-t border-[#2c1a0e]/8">
+    <section class="bg-[#fff8ef] border-t border-[#2c1a0e]/8 sm:py-12 py-12">
 
-        <div class="max-w-7xl mx-auto px-4 md:px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-8  grid md:grid-cols-2 gap-12 items-center">
 
             <!-- Imagen -->
             <div class="relative order-2 md:order-1">

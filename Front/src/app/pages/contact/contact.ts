@@ -18,7 +18,7 @@ export class Contact {
     { label: 'Dirección', value: 'Av. Riestra 5901, Villa Lugano - CABA', icon: 'location_on' },
     { label: 'Teléfono', value: '+54 011 4601-2805', icon: 'phone' },
     { label: 'Instagram', value: 'lostrigales.pastas', icon: 'instagram' },
-    { label: 'Horario de atención', value: 'Mar – Dom: 7:00 – 20:00 hs.', icon: 'schedule' },
+    { label: 'Horario de atención', value: 'Mar a Sáb: 8:30 a 13:30 hs y 17:00 a 21:00 hs | Dom: 8:00 a 14:00 hs', icon: 'schedule' },
   ];
 
   constructor(private fb: FormBuilder) {
