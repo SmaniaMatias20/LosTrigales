@@ -58,7 +58,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos con morrón, una opción sabrosa y diferente para todos los días.',
-      image: 'assets/images/products/3.jpg',
+      image: 'assets/images/products/3.jpeg',
       stock: true,
     },
     {
@@ -108,7 +108,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos rellenos de ricota, jamón y queso. Un clásico artesanal.',
-      image: 'assets/images/products/8.jpg',
+      image: 'assets/images/products/8.jpeg',
       stock: true,
     },
     {
@@ -133,22 +133,12 @@ export class Products {
     },
     {
       id: 11,
-      name: 'Ravioles de Pollo, Jamón y Verdura',
+      name: 'Ravioles de Pollo y Verdura',
       price: 0,
       weight: '1 caja',
       category: 'Pasta Rellena',
-      description: 'Ravioles frescos con relleno de pollo, jamón y verdura.',
+      description: 'Ravioles frescos con relleno de pollo y verdura.',
       image: 'assets/images/products/11.jpg',
-      stock: true,
-    },
-    {
-      id: 12,
-      name: 'Ravioles de Pollo, Carne y Verdura',
-      price: 0,
-      weight: '1 caja',
-      category: 'Pasta Rellena',
-      description: 'Ravioles artesanales con relleno abundante de pollo, carne y verdura.',
-      image: 'assets/images/products/12.jpg',
       stock: true,
     },
     {
@@ -168,7 +158,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones grandes con relleno de ricota, jamón y nuez.',
-      image: 'assets/images/products/14.jpg',
+      image: 'assets/images/products/14.jpeg',
       stock: true,
     },
     {
@@ -188,7 +178,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones frescos con relleno suave de calabaza.',
-      image: 'assets/images/products/16.jpg',
+      image: 'assets/images/products/16.jpeg',
       stock: true,
     },
     {
@@ -218,7 +208,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales con relleno de osobuco, intensos y sabrosos.',
-      image: 'assets/images/products/19.jpg',
+      image: 'assets/images/products/19.jpeg',
       stock: true,
     },
     {
@@ -258,7 +248,7 @@ export class Products {
       weight: '1 plancha',
       category: 'Pasta Rellena',
       description: 'Sorrentinos frescos estilo caprese, una opción suave y sabrosa.',
-      image: 'assets/images/products/23.jpg',
+      image: 'assets/images/products/23.jpeg',
       stock: true,
     },
     {
@@ -452,7 +442,7 @@ export class Products {
       stock: true,
     },
     {
-      id: 45,
+      id: 43,
       name: 'Ravioles con Salsa',
       price: 0,
       weight: '1 porción',
@@ -462,7 +452,7 @@ export class Products {
       stock: true,
     },
     {
-      id: 46,
+      id: 44,
       name: 'Tallarines con Salsa',
       price: 0,
       weight: '1 porción',
@@ -508,7 +498,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Lasagna lista para llevar, acompañada con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/50.jpeg',
       stock: true,
     },
     {
@@ -659,6 +649,16 @@ export class Products {
       category: 'Postres',
       description: 'Tiramisú clásico, suave y cremoso.',
       image: 'assets/images/products/65.png',
+      stock: true,
+    },
+    {
+      id: 66,
+      name: 'Ñoquis de Espinaca',
+      price: 0,
+      weight: '300g',
+      category: 'Ñoquis',
+      description: 'Ñoquis frescos de espinaca, de sabor suave y textura artesanal.',
+      image: 'assets/images/products/66.jpeg',
       stock: true,
     },
   ];

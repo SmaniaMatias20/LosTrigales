@@ -37,7 +37,7 @@ export class Home {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales con relleno de osobuco, intensos y sabrosos.',
-      image: 'assets/images/products/19.jpg',
+      image: 'assets/images/products/19.jpeg',
       stock: true,
     },
     {
