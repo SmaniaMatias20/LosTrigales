@@ -78,7 +78,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Corta',
       description: 'Pasta corta fresca, ideal para salsas cremosas o con mucho sabor.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/5.jpg',
       stock: true,
     },
     {
@@ -88,7 +88,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Corta',
       description: 'Mostacholes frescos artesanales, perfectos para acompañar con salsa roja o blanca.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/6.jpg',
       stock: true,
     },
     {
@@ -108,7 +108,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos rellenos de ricota, jamón y queso. Un clásico artesanal.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/8.jpg',
       stock: true,
     },
     {
@@ -118,7 +118,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos rellenos de ricota y verdura, suaves y sabrosos.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/9.jpg',
       stock: true,
     },
     {
@@ -128,7 +128,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles artesanales con relleno cremoso de ricota y queso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/10.jpg',
       stock: true,
     },
     {
@@ -138,7 +138,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos con relleno de pollo, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/11.jpg',
       stock: true,
     },
     {
@@ -148,7 +148,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles artesanales con relleno abundante de pollo, carne y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/12.jpg',
       stock: true,
     },
     {
@@ -158,7 +158,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles tradicionales rellenos con seso y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/13.jpg',
       stock: true,
     },
     {
@@ -168,7 +168,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones grandes con relleno de ricota, jamón y nuez.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/14.jpg',
       stock: true,
     },
     {
@@ -178,7 +178,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones artesanales rellenos de pollo, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/15.jpg',
       stock: true,
     },
     {
@@ -188,7 +188,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones frescos con relleno suave de calabaza.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/16.jpg',
       stock: true,
     },
     {
@@ -198,7 +198,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones rellenos con una mezcla cremosa de cuatro quesos.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/17.jpg',
       stock: true,
     },
     {
@@ -208,7 +208,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales rellenos de vacío y provoleta.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/18.jpg',
       stock: true,
     },
     {
@@ -218,7 +218,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales con relleno de osobuco, intensos y sabrosos.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/19.jpg',
       stock: true,
     },
     {
@@ -228,7 +228,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones artesanales rellenos de bondiola.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/20.jpg',
       stock: true,
     },
     {
@@ -238,7 +238,7 @@ export class Products {
       weight: '250g',
       category: 'Pasta Rellena',
       description: 'Tortelitis frescos rellenos de pollo, jamón y queso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/21.jpg',
       stock: true,
     },
     {
@@ -248,7 +248,7 @@ export class Products {
       weight: '1 plancha',
       category: 'Pasta Rellena',
       description: 'Sorrentinos grandes rellenos de muzzarella y jamón.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/22.jpg',
       stock: true,
     },
     {
@@ -258,7 +258,7 @@ export class Products {
       weight: '1 plancha',
       category: 'Pasta Rellena',
       description: 'Sorrentinos frescos estilo caprese, una opción suave y sabrosa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/23.jpg',
       stock: true,
     },
     {
@@ -408,7 +408,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa casera tipo tuco, ideal para acompañar pastas frescas.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/38.jpg',
       stock: true,
     },
     {
@@ -418,7 +418,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa bolognesa casera, con sabor tradicional y buena consistencia.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/39.jpg',
       stock: true,
     },
     {
@@ -428,7 +428,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa blanca casera, cremosa y suave.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/40.jpg',
       stock: true,
     },
     {
@@ -438,7 +438,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa cremosa de cuatro quesos, ideal para pastas rellenas.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/41.jpg',
       stock: true,
     },
     {
@@ -448,7 +448,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Pesto casero fresco, perfecto para pastas largas o rellenas.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/42.jpg',
       stock: true,
     },
     {
@@ -618,7 +618,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos de papa, tiernos y clásicos.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/59.jpg',
       stock: true,
     },
     {
@@ -628,7 +628,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos combinados con morrón y espinaca.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/60.jpg',
       stock: true,
     },
     {
@@ -648,7 +648,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis tricolor frescos, ideales para una comida casera y colorida.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/62.jpg',
       stock: true,
     },
     {
@@ -678,7 +678,7 @@ export class Products {
       weight: '1 unidad',
       category: 'Postres',
       description: 'Tiramisú clásico, suave y cremoso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/65.png',
       stock: true,
     },
   ];
