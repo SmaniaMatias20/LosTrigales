@@ -38,7 +38,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos de yemita, ideales para acompañar con tuco, boloñesa o salsa casera.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/1.jpg',
       stock: true,
     },
     {
@@ -48,7 +48,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos con espinaca, de sabor suave y textura artesanal.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/2.jpg',
       stock: true,
     },
     {
@@ -58,7 +58,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos con morrón, una opción sabrosa y diferente para todos los días.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/3.jpg',
       stock: true,
     },
     {
@@ -68,7 +68,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines caseros tradicionales, elaborados con receta artesanal.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/4.jpg',
       stock: true,
     },
     {
@@ -98,7 +98,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines especiales con tinta de calamar, de sabor intenso y presentación diferente.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/7.jpg',
       stock: true,
     },
     {
@@ -449,26 +449,6 @@ export class Products {
       category: 'Salsas',
       description: 'Pesto casero fresco, perfecto para pastas largas o rellenas.',
       image: 'assets/images/products/42.jpg',
-      stock: true,
-    },
-    {
-      id: 43,
-      name: 'Raviolón de Calabaza y Muzzarella',
-      price: 0,
-      weight: '1 caja',
-      category: 'Vegetarianas',
-      description: 'Raviolón vegetariano relleno de calabaza y muzzarella.',
-      image: 'assets/images/products/0.png',
-      stock: true,
-    },
-    {
-      id: 44,
-      name: 'Raviolón Cuatro Quesos',
-      price: 0,
-      weight: '1 caja',
-      category: 'Vegetarianas',
-      description: 'Raviolón vegetariano relleno con mezcla de cuatro quesos.',
-      image: 'assets/images/products/0.png',
       stock: true,
     },
     {
