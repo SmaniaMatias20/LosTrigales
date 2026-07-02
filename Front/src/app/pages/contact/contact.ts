@@ -12,7 +12,7 @@ export class Contact {
   form: FormGroup;
   submitted = false;
   loading = false;
-  whatsappNumber = '5491162559206'; // sin +, sin espacios
+  whatsappNumber = '5491166804699'; // sin +, sin espacios
 
   info = [
     { label: 'Dirección', value: 'Av. Riestra 5901, Villa Lugano - CABA', icon: 'location_on' },
