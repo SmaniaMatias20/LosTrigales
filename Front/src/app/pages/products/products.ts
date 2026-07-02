@@ -398,7 +398,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa casera tipo tuco, ideal para acompañar pastas frescas.',
-      image: 'assets/images/products/38.jpg',
+      image: 'assets/images/products/38.png',
       stock: true,
     },
     {
@@ -408,7 +408,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa bolognesa casera, con sabor tradicional y buena consistencia.',
-      image: 'assets/images/products/39.jpg',
+      image: 'assets/images/products/39.png',
       stock: true,
     },
     {
@@ -418,7 +418,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa blanca casera, cremosa y suave.',
-      image: 'assets/images/products/40.jpg',
+      image: 'assets/images/products/40.png',
       stock: true,
     },
     {
@@ -428,7 +428,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa cremosa de cuatro quesos, ideal para pastas rellenas.',
-      image: 'assets/images/products/41.jpg',
+      image: 'assets/images/products/41.png',
       stock: true,
     },
     {
@@ -438,7 +438,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Pesto casero fresco, perfecto para pastas largas o rellenas.',
-      image: 'assets/images/products/42.jpg',
+      image: 'assets/images/products/42.png',
       stock: true,
     },
     {
