@@ -17,7 +17,7 @@ export class Home {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales rellenos de vacío y provoleta.',
-      image: 'assets/images/products/18.jpg',
+      image: 'assets/images/products/18.webp',
       stock: true,
     },
     {
@@ -27,7 +27,7 @@ export class Home {
       weight: '500g',
       category: 'Pasta Corta',
       description: 'Pasta corta fresca, ideal para salsas cremosas o con mucho sabor.',
-      image: 'assets/images/products/5.jpg',
+      image: 'assets/images/products/5.webp',
       stock: true,
     },
     {
@@ -37,7 +37,7 @@ export class Home {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales con relleno de osobuco, intensos y sabrosos.',
-      image: 'assets/images/products/19.jpeg',
+      image: 'assets/images/products/19.webp',
       stock: true,
     },
     {
@@ -47,7 +47,7 @@ export class Home {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos combinados con morrón y espinaca.',
-      image: 'assets/images/products/60.jpg',
+      image: 'assets/images/products/60.webp',
       stock: true,
     },
   ];

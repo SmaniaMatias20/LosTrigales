@@ -38,7 +38,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos de yemita, ideales para acompañar con tuco, boloñesa o salsa casera.',
-      image: 'assets/images/products/1.jpg',
+      image: 'assets/images/products/1.webp',
       stock: true,
     },
     {
@@ -48,7 +48,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos con espinaca, de sabor suave y textura artesanal.',
-      image: 'assets/images/products/2.jpg',
+      image: 'assets/images/products/2.webp',
       stock: true,
     },
     {
@@ -58,7 +58,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines frescos con morrón, una opción sabrosa y diferente para todos los días.',
-      image: 'assets/images/products/3.jpeg',
+      image: 'assets/images/products/3.webp',
       stock: true,
     },
     {
@@ -68,7 +68,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines caseros tradicionales, elaborados con receta artesanal.',
-      image: 'assets/images/products/4.jpg',
+      image: 'assets/images/products/4.webp',
       stock: true,
     },
     {
@@ -78,7 +78,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Corta',
       description: 'Pasta corta fresca, ideal para salsas cremosas o con mucho sabor.',
-      image: 'assets/images/products/5.jpg',
+      image: 'assets/images/products/5.webp',
       stock: true,
     },
     {
@@ -88,7 +88,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Corta',
       description: 'Mostacholes frescos artesanales, perfectos para acompañar con salsa roja o blanca.',
-      image: 'assets/images/products/6.jpg',
+      image: 'assets/images/products/6.webp',
       stock: true,
     },
     {
@@ -98,7 +98,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Larga',
       description: 'Tallarines especiales con tinta de calamar, de sabor intenso y presentación diferente.',
-      image: 'assets/images/products/7.jpg',
+      image: 'assets/images/products/7.webp',
       stock: true,
     },
     {
@@ -108,7 +108,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos rellenos de ricota, jamón y queso. Un clásico artesanal.',
-      image: 'assets/images/products/8.jpeg',
+      image: 'assets/images/products/8.webp',
       stock: true,
     },
     {
@@ -118,7 +118,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos rellenos de ricota y verdura, suaves y sabrosos.',
-      image: 'assets/images/products/9.jpg',
+      image: 'assets/images/products/9.webp',
       stock: true,
     },
     {
@@ -128,7 +128,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles artesanales con relleno cremoso de ricota y queso.',
-      image: 'assets/images/products/10.jpg',
+      image: 'assets/images/products/10.webp',
       stock: true,
     },
     {
@@ -138,7 +138,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles frescos con relleno de pollo y verdura.',
-      image: 'assets/images/products/11.jpg',
+      image: 'assets/images/products/11.webp',
       stock: true,
     },
     {
@@ -148,7 +148,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Ravioles tradicionales rellenos con seso y verdura.',
-      image: 'assets/images/products/13.jpg',
+      image: 'assets/images/products/13.webp',
       stock: true,
     },
     {
@@ -158,7 +158,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones grandes con relleno de ricota, jamón y nuez.',
-      image: 'assets/images/products/14.jpeg',
+      image: 'assets/images/products/14.webp',
       stock: true,
     },
     {
@@ -168,7 +168,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones artesanales rellenos de pollo, jamón y verdura.',
-      image: 'assets/images/products/15.jpg',
+      image: 'assets/images/products/15.webp',
       stock: true,
     },
     {
@@ -178,7 +178,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones frescos con relleno suave de calabaza.',
-      image: 'assets/images/products/16.jpeg',
+      image: 'assets/images/products/16.webp',
       stock: true,
     },
     {
@@ -188,7 +188,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones rellenos con una mezcla cremosa de cuatro quesos.',
-      image: 'assets/images/products/17.jpg',
+      image: 'assets/images/products/17.webp',
       stock: true,
     },
     {
@@ -198,7 +198,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales rellenos de vacío y provoleta.',
-      image: 'assets/images/products/18.jpg',
+      image: 'assets/images/products/18.webp',
       stock: true,
     },
     {
@@ -208,7 +208,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones especiales con relleno de osobuco, intensos y sabrosos.',
-      image: 'assets/images/products/19.jpeg',
+      image: 'assets/images/products/19.webp',
       stock: true,
     },
     {
@@ -218,7 +218,7 @@ export class Products {
       weight: '1 caja',
       category: 'Pasta Rellena',
       description: 'Raviolones artesanales rellenos de bondiola.',
-      image: 'assets/images/products/20.jpg',
+      image: 'assets/images/products/20.webp',
       stock: true,
     },
     {
@@ -228,7 +228,7 @@ export class Products {
       weight: '250g',
       category: 'Pasta Rellena',
       description: 'Tortelitis frescos rellenos de pollo, jamón y queso.',
-      image: 'assets/images/products/21.jpg',
+      image: 'assets/images/products/21.webp',
       stock: true,
     },
     {
@@ -238,7 +238,7 @@ export class Products {
       weight: '1 plancha',
       category: 'Pasta Rellena',
       description: 'Sorrentinos grandes rellenos de muzzarella y jamón.',
-      image: 'assets/images/products/22.jpg',
+      image: 'assets/images/products/22.webp',
       stock: true,
     },
     {
@@ -248,7 +248,7 @@ export class Products {
       weight: '1 plancha',
       category: 'Pasta Rellena',
       description: 'Sorrentinos frescos estilo caprese, una opción suave y sabrosa.',
-      image: 'assets/images/products/23.jpeg',
+      image: 'assets/images/products/23.webp',
       stock: true,
     },
     {
@@ -258,7 +258,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Horno',
       description: 'Lasagna artesanal rellena de ricota y jamón, lista para horno o microondas.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -268,7 +268,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Horno',
       description: 'Lasagna fresca con ricota, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -278,7 +278,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Horno',
       description: 'Lasagna artesanal con relleno de pollo, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -288,7 +288,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Horno',
       description: 'Lasagna casera rellena de carne y huevo.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -298,7 +298,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Rellena',
       description: 'Agnolotis frescos rellenos de ricota, jamón y nuez.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -308,7 +308,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Rellena',
       description: 'Agnolotis artesanales con relleno de ricota y jamón.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -318,7 +318,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Rellena',
       description: 'Agnolotis frescos rellenos de jamón y muzzarella.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -328,7 +328,7 @@ export class Products {
       weight: '4 unidades',
       category: 'Para Horno',
       description: 'Arrollados caseros de ricota, ideales para acompañar con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -338,7 +338,7 @@ export class Products {
       weight: '4 unidades',
       category: 'Para Horno',
       description: 'Arrollados frescos de jamón, listos para calentar y servir.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -348,7 +348,7 @@ export class Products {
       weight: '4 unidades',
       category: 'Para Horno',
       description: 'Arrollados rellenos de pollo y verdura, con opción de salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -358,7 +358,7 @@ export class Products {
       weight: '1 unidad',
       category: 'Pizzas y Tapas',
       description: 'Prepizza casera de tomate, lista para agregar ingredientes y hornear.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -368,7 +368,7 @@ export class Products {
       weight: '12 unidades',
       category: 'Pizzas y Tapas',
       description: 'Pizzetas caseras listas para preparar.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -378,7 +378,7 @@ export class Products {
       weight: '1 paquete',
       category: 'Pizzas y Tapas',
       description: 'Tapas frescas para empanadas, listas para rellenar.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -388,7 +388,7 @@ export class Products {
       weight: '1 paquete',
       category: 'Para Horno',
       description: 'Tapas frescas para preparar canelones caseros.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -398,7 +398,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa casera tipo tuco, ideal para acompañar pastas frescas.',
-      image: 'assets/images/products/38.png',
+      image: 'assets/images/products/38.webp',
       stock: true,
     },
     {
@@ -408,7 +408,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa bolognesa casera, con sabor tradicional y buena consistencia.',
-      image: 'assets/images/products/39.png',
+      image: 'assets/images/products/39.webp',
       stock: true,
     },
     {
@@ -418,7 +418,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa blanca casera, cremosa y suave.',
-      image: 'assets/images/products/40.png',
+      image: 'assets/images/products/40.webp',
       stock: true,
     },
     {
@@ -428,7 +428,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Salsa cremosa de cuatro quesos, ideal para pastas rellenas.',
-      image: 'assets/images/products/41.png',
+      image: 'assets/images/products/41.webp',
       stock: true,
     },
     {
@@ -438,7 +438,7 @@ export class Products {
       weight: '250g',
       category: 'Salsas',
       description: 'Pesto casero fresco, perfecto para pastas largas o rellenas.',
-      image: 'assets/images/products/42.png',
+      image: 'assets/images/products/42.webp',
       stock: true,
     },
     {
@@ -448,7 +448,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Ravioles listos para llevar, servidos con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -458,7 +458,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Tallarines listos para llevar, acompañados con salsa casera.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -468,7 +468,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Ñoquis listos para llevar, servidos con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -478,7 +478,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Torteletis listos para llevar, acompañados con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -488,7 +488,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Llevar',
       description: 'Canelones listos para llevar, servidos con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -498,7 +498,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Llevar',
       description: 'Lasagna lista para llevar, acompañada con salsa.',
-      image: 'assets/images/products/50.jpeg',
+      image: 'assets/images/products/50.webp',
       stock: true,
     },
     {
@@ -508,7 +508,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Horno',
       description: 'Canelones frescos rellenos de ricota, jamón y queso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -518,7 +518,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Horno',
       description: 'Canelones caseros rellenos de pollo, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -528,7 +528,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Horno',
       description: 'Canelones frescos rellenos de jamón y muzzarella.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -538,7 +538,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Horno',
       description: 'Canelones artesanales con relleno de ricota, jamón y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -548,7 +548,7 @@ export class Products {
       weight: '3 unidades',
       category: 'Para Horno',
       description: 'Canelones frescos rellenos de ricota, jamón y nuez.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -558,7 +558,7 @@ export class Products {
       weight: '1 porción',
       category: 'Para Horno',
       description: 'Panqueques caseros listos para calentar, servidos con salsa.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -568,7 +568,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Rellena',
       description: 'Fideos rellenos frescos con ricota y queso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -578,7 +578,7 @@ export class Products {
       weight: '500g',
       category: 'Pasta Rellena',
       description: 'Fideos rellenos artesanales de pollo y verdura.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -588,7 +588,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos de papa, tiernos y clásicos.',
-      image: 'assets/images/products/59.jpg',
+      image: 'assets/images/products/59.webp',
       stock: true,
     },
     {
@@ -598,7 +598,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos combinados con morrón y espinaca.',
-      image: 'assets/images/products/60.jpg',
+      image: 'assets/images/products/60.webp',
       stock: true,
     },
     {
@@ -608,7 +608,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis suaves de ricota, livianos y artesanales.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -618,7 +618,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis tricolor frescos, ideales para una comida casera y colorida.',
-      image: 'assets/images/products/62.jpg',
+      image: 'assets/images/products/62.webp',
       stock: true,
     },
     {
@@ -628,7 +628,7 @@ export class Products {
       weight: '1 unidad',
       category: 'Postres',
       description: 'Postre clásico Massini, ideal para acompañar después de una buena pasta.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -638,7 +638,7 @@ export class Products {
       weight: '1 unidad',
       category: 'Postres',
       description: 'Postre Balcarce tradicional, dulce y cremoso.',
-      image: 'assets/images/products/0.png',
+      image: 'assets/images/products/0.webp',
       stock: true,
     },
     {
@@ -648,7 +648,7 @@ export class Products {
       weight: '1 unidad',
       category: 'Postres',
       description: 'Tiramisú clásico, suave y cremoso.',
-      image: 'assets/images/products/65.png',
+      image: 'assets/images/products/65.webp',
       stock: true,
     },
     {
@@ -658,7 +658,7 @@ export class Products {
       weight: '300g',
       category: 'Ñoquis',
       description: 'Ñoquis frescos de espinaca, de sabor suave y textura artesanal.',
-      image: 'assets/images/products/66.jpeg',
+      image: 'assets/images/products/66.webp',
       stock: true,
     },
   ];

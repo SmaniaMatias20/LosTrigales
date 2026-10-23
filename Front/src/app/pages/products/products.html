@@ -58,7 +58,7 @@
 
                 <!-- IMAGEN -->
                 <div class="relative overflow-hidden aspect-square bg-[#ede0ce]">
-                    <img [src]="product.image" [alt]="product.name"
+                    <img [src]="product.image" [alt]="product.name" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-500"
                         [ngClass]="product.stock ? 'group-hover:scale-105' : 'grayscale'" />
 
