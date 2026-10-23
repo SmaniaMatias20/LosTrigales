@@ -57,8 +57,10 @@
         <!-- PRODUCTOS -->
         <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
 
-            <div *ngFor="let product of paginatedProducts"
-                class="group bg-superficie border rounded-sm overflow-hidden transition-all duration-300 animate-fade-up"
+            <div *ngFor="let product of paginatedProducts" (click)="selectedProduct = product"
+                (keydown.enter)="selectedProduct = product" (keydown.space)="$event.preventDefault(); selectedProduct = product"
+                role="button" tabindex="0" [attr.aria-label]="'Ver ' + product.name"
+                class="group bg-superficie border rounded-sm overflow-hidden transition-all duration-300 animate-fade-up cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-acento/50"
                 [ngClass]="
           product.stock
             ? 'border-tinta/8 hover:border-acento/30 hover:shadow-md'
@@ -164,3 +166,5 @@
 
     </div>
 </div>
+
+<app-product-modal *ngIf="selectedProduct" [product]="selectedProduct" (closed)="selectedProduct = null" />

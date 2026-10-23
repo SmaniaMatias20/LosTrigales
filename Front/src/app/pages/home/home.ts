@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Product, ProductModal } from '../../components/product-modal/product-modal';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ProductModal],
   templateUrl: './home.html',
 })
 export class Home {
-  featuredProducts = [
+  selectedProduct: Product | null = null;
+
+  featuredProducts: Product[] = [
     {
       id: 18,
       name: 'Raviolones de Vacío y Provoleta',

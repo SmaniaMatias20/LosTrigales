@@ -131,8 +131,10 @@
 
             @for(product of featuredProducts; track product.id) {
 
-            <div
-                class="group bg-superficie border border-tinta/8 hover:border-acento/30 hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden">
+            <div (click)="selectedProduct = product" (keydown.enter)="selectedProduct = product"
+                (keydown.space)="$event.preventDefault(); selectedProduct = product" role="button" tabindex="0"
+                [attr.aria-label]="'Ver ' + product.name"
+                class="group bg-superficie border border-tinta/8 hover:border-acento/30 hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-acento/50">
 
                 <div class="relative overflow-hidden aspect-square bg-superficie-2">
 
@@ -273,3 +275,7 @@
 
     </section>
 </div>
+
+@if (selectedProduct) {
+<app-product-modal [product]="selectedProduct" (closed)="selectedProduct = null" />
+}

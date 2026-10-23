@@ -1,0 +1,54 @@
+<div class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6">
+
+    <!-- Fondo -->
+    <div class="backdrop absolute inset-0 bg-[#2c1a0e]/70 backdrop-blur-sm" (click)="close()"></div>
+
+    <!-- Contenido -->
+    <div role="dialog" aria-modal="true" aria-labelledby="product-modal-title"
+        class="panel relative w-full sm:max-w-3xl max-h-[92svh] overflow-y-auto bg-superficie border border-tinta/10 rounded-t-lg sm:rounded-sm shadow-2xl grid sm:grid-cols-2">
+
+        <button #closeButton type="button" (click)="close()" aria-label="Cerrar"
+            class="absolute top-3 right-3 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-superficie/90 text-tinta-suave hover:text-acento transition-colors duration-200 cursor-pointer">
+            <span class="material-icons text-xl">close</span>
+        </button>
+
+        <!-- Imagen -->
+        <div class="relative aspect-square sm:aspect-auto sm:min-h-[420px] bg-superficie-2">
+            <img [src]="product.image" [alt]="product.name" class="absolute inset-0 w-full h-full object-cover"
+                [class.grayscale]="!product.stock" />
+        </div>
+
+        <!-- Info -->
+        <div class="p-6 sm:p-8 flex flex-col">
+
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[10px] uppercase tracking-widest text-acento bg-[#b5451b]/10 px-2 py-1 rounded-sm">
+                    {{ product.category }}
+                </span>
+
+                @if (!product.stock) {
+                <span class="text-[10px] uppercase tracking-widest text-tinta-suave bg-superficie-2 px-2 py-1 rounded-sm">
+                    Agotado
+                </span>
+                }
+            </div>
+
+            <h2 id="product-modal-title" class="text-2xl sm:text-3xl text-tinta leading-snug pr-8"
+                style="font-family: 'Playfair Display', serif">
+                {{ product.name }}
+            </h2>
+
+            <p class="text-tinta-suave leading-relaxed mt-4">
+                {{ product.description }}
+            </p>
+
+            <a routerLink="/contacto" (click)="close()"
+                class="mt-6 sm:mt-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#b5451b] text-[#fff8ef] text-xs uppercase tracking-widest hover:bg-[#963a16] transition-colors duration-200 rounded-sm">
+                Consultar por este producto
+
+                <span class="material-icons text-sm">arrow_forward</span>
+            </a>
+
+        </div>
+    </div>
+</div>

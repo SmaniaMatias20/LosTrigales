@@ -1,24 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Product, ProductModal } from '../../components/product-modal/product-modal';
 
 type SortBy = 'default' | 'az' | 'za';
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  weight: string;
-  category: string;
-  description: string;
-  image: string;
-  stock: boolean;
-}
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ProductModal],
   templateUrl: './products.html',
   styleUrl: './products.css',
 })
@@ -26,6 +16,7 @@ export class Products {
   selectedCategory = 'Todos';
   sortBy: SortBy = 'default';
   searchTerm = '';
+  selectedProduct: Product | null = null;
 
   currentPage = 1;
   readonly pageSize = 12;
