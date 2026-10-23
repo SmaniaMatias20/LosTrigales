@@ -39,6 +39,17 @@ export class Navbar {
     this.mobileOpen = false;
   }
 
+  darkMode = document.documentElement.classList.contains('dark');
+
+  toggleTheme() {
+    this.darkMode = !this.darkMode;
+    document.documentElement.classList.toggle('dark', this.darkMode);
+
+    try {
+      localStorage.setItem('tema', this.darkMode ? 'oscuro' : 'claro');
+    } catch { }
+  }
+
   // Simulación
   cartCount = 3;
 

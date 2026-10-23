@@ -25,6 +25,10 @@ interface Product {
 export class Products {
   selectedCategory = 'Todos';
   sortBy: SortBy = 'default';
+  searchTerm = '';
+
+  currentPage = 1;
+  readonly pageSize = 12;
 
   get categories(): string[] {
     return ['Todos', ...new Set(this.products.map(product => product.category))];
@@ -664,10 +668,15 @@ export class Products {
   ];
 
   get filteredProducts(): Product[] {
+    const term = this.normalize(this.searchTerm.trim());
+
     const filtered = this.products.filter(
       (product) =>
-        this.selectedCategory === 'Todos' ||
-        product.category === this.selectedCategory
+        (this.selectedCategory === 'Todos' ||
+          product.category === this.selectedCategory) &&
+        (!term ||
+          this.normalize(product.name).includes(term) ||
+          this.normalize(product.description).includes(term))
     );
 
     return [...filtered].sort((a, b) => {
@@ -683,8 +692,64 @@ export class Products {
     });
   }
 
-  selectCategory(category: string): void {
-    this.selectedCategory = category;
+  get totalPages(): number {
+    return Math.max(1, Math.ceil(this.filteredProducts.length / this.pageSize));
+  }
+
+  get paginatedProducts(): Product[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+    return this.filteredProducts.slice(start, start + this.pageSize);
+  }
+
+  get rangeStart(): number {
+    return (this.currentPage - 1) * this.pageSize + 1;
+  }
+
+  get rangeEnd(): number {
+    return Math.min(this.currentPage * this.pageSize, this.filteredProducts.length);
+  }
+
+  // Números de página a mostrar, con '…' cuando hay muchas
+  get pages(): (number | '…')[] {
+    const total = this.totalPages;
+    const current = this.currentPage;
+
+    if (total <= 7) {
+      return Array.from({ length: total }, (_, i) => i + 1);
+    }
+
+    const pages: (number | '…')[] = [1];
+    const from = Math.max(2, current - 1);
+    const to = Math.min(total - 1, current + 1);
+
+    if (from > 2) pages.push('…');
+    for (let page = from; page <= to; page++) pages.push(page);
+    if (to < total - 1) pages.push('…');
+
+    pages.push(total);
+    return pages;
+  }
+
+  // Al cambiar búsqueda, categoría u orden se vuelve a la primera página
+  resetPage(): void {
+    this.currentPage = 1;
+  }
+
+  clearFilters(): void {
+    this.searchTerm = '';
+    this.selectedCategory = 'Todos';
+    this.resetPage();
+  }
+
+  goToPage(page: number): void {
+    if (page < 1 || page > this.totalPages || page === this.currentPage) return;
+
+    this.currentPage = page;
+    document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  private normalize(text: string): string {
+    return text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   }
 
   // handleAddToCart(product: Product): void {

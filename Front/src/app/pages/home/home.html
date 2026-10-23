@@ -1,7 +1,7 @@
-<div class="bg-[#f7f0e6] min-h-screen">
+<div class="bg-fondo min-h-screen">
 
     <!-- HERO -->
-    <section class="relative h-screen flex items-center overflow-hidden pt-16">
+    <section class="relative h-svh min-h-[560px] max-h-[900px] flex items-center overflow-hidden pt-16">
 
         <!-- Imagen de fondo -->
         <div class="absolute inset-0">
@@ -70,24 +70,24 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="border-y border-[#2c1a0e]/10 bg-[#fff8ef]">
+    <section class="border-y border-tinta/10 bg-superficie">
         <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
 
             @for(feature of features; track feature.title) {
 
             <div class="flex flex-col gap-3">
 
-                <span class="material-icons text-2xl text-[#b5451b]">
+                <span class="material-icons text-2xl text-acento">
                     {{ feature.icon }}
                 </span>
 
                 <div>
 
-                    <p class="text-[#2c1a0e] text-sm" style="font-family:'Playfair Display', serif;">
+                    <p class="text-tinta text-sm" style="font-family:'Playfair Display', serif;">
                         {{ feature.title }}
                     </p>
 
-                    <p class="text-[#8a6a50] text-xs mt-1 leading-relaxed">
+                    <p class="text-tinta-suave text-xs mt-1 leading-relaxed">
                         {{ feature.desc }}
                     </p>
 
@@ -101,22 +101,22 @@
     </section>
 
     <!-- PRODUCTOS DESTACADOS -->
-    <section class="sm:py-24 max-w-7xl mx-auto px-4 md:px-8">
+    <section class="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 md:px-8">
 
         <div class="flex items-end justify-between mb-12">
 
             <div>
-                <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-2">
+                <p class="text-acento text-xs uppercase tracking-widest mb-2">
                     Elaboración del día
                 </p>
 
-                <h2 class="text-3xl md:text-4xl text-[#2c1a0e]" style="font-family:'Playfair Display', serif;">
+                <h2 class="text-3xl md:text-4xl text-tinta" style="font-family:'Playfair Display', serif;">
                     Productos Destacados
                 </h2>
             </div>
 
             <a routerLink="/productos"
-                class="group hidden md:inline-flex items-center gap-1 text-[#8a6a50] text-sm hover:text-[#b5451b] transition-colors">
+                class="group hidden md:inline-flex items-center gap-1 text-tinta-suave text-sm hover:text-acento transition-colors">
                 Ver todos
 
                 <span
@@ -127,45 +127,45 @@
 
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
 
             @for(product of featuredProducts; track product.id) {
 
             <div
-                class="group bg-[#fff8ef] border border-[#2c1a0e]/8 hover:border-[#b5451b]/30 hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden">
+                class="group bg-superficie border border-tinta/8 hover:border-acento/30 hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden">
 
-                <div class="relative overflow-hidden aspect-square bg-[#ede0ce]">
+                <div class="relative overflow-hidden aspect-square bg-superficie-2">
 
                     <img [src]="product.image" [alt]="product.name" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
 
-                    <div class="absolute top-3 left-3">
+                    <div class="absolute top-2 left-2 sm:top-3 sm:left-3">
                         <span
-                            class="text-[10px] uppercase tracking-widest text-[#b5451b] bg-[#fff8ef]/90 px-2 py-1 rounded-sm">
+                            class="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-acento bg-superficie/90 px-2 py-1 rounded-sm">
                             {{ product.category }}
                         </span>
                     </div>
 
                 </div>
 
-                <div class="p-4">
+                <div class="p-3 sm:p-4">
 
-                    <h3 class="text-[#2c1a0e] text-lg leading-snug" style="font-family:'Playfair Display', serif;">
+                    <h3 class="text-tinta text-base sm:text-lg leading-snug" style="font-family:'Playfair Display', serif;">
                         {{ product.name }}
                     </h3>
 
-                    <p class="text-[#8a6a50] text-xs mt-1">
+                    <p class="text-tinta-suave text-xs mt-1 line-clamp-2">
                         {{ product.description }}
                     </p>
 
                     <!-- <div class="flex items-center justify-between mt-4">
 
-                        <span class="text-[#b5451b] text-lg" style="font-family:'Playfair Display', serif;">
+                        <span class="text-acento text-lg" style="font-family:'Playfair Display', serif;">
                             ${{ product.price }}
                         </span>
 
                         <button (click)="addToCart(product)"
-                            class="px-3 py-1.5 bg-[#b5451b]/10 border border-[#b5451b]/30 text-[#2c1a0e] text-xs uppercase tracking-wider hover:bg-[#b5451b] hover:border-[#b5451b] hover:text-[#fff8ef] transition-colors duration-200 rounded-sm">
+                            class="px-3 py-1.5 bg-[#b5451b]/10 border border-acento/30 text-tinta text-xs uppercase tracking-wider hover:bg-[#b5451b] hover:border-acento hover:text-[#fff8ef] transition-colors duration-200 rounded-sm">
                             Agregar
                         </button>
 
@@ -181,7 +181,7 @@
 
         <!-- <div class="mt-10 text-center md:hidden">
             <a routerLink="/productos"
-                class="group inline-flex items-center gap-2 text-[#b5451b] text-sm underline underline-offset-4">
+                class="group inline-flex items-center gap-2 text-acento text-sm underline underline-offset-4">
                 Ver todos los productos
 
                 <span
@@ -194,7 +194,7 @@
     </section>
 
     <!-- ELABORACIÓN DIARIA -->
-    <section class="bg-[#fff8ef] border-t border-[#2c1a0e]/8 sm:py-12 py-12">
+    <section class="bg-superficie border-t border-tinta/8 py-14 lg:py-20">
 
         <div class="max-w-7xl mx-auto px-4 md:px-8  grid md:grid-cols-2 gap-12 items-center">
 
@@ -221,11 +221,11 @@
             <!-- Texto -->
             <div class="order-1 md:order-2">
 
-                <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-4">
+                <p class="text-acento text-xs uppercase tracking-widest mb-4">
                     Elaboración diaria
                 </p>
 
-                <h2 class="text-3xl md:text-4xl text-[#2c1a0e] leading-tight mb-6"
+                <h2 class="text-3xl md:text-4xl text-tinta leading-tight mb-6"
                     style="font-family:'Playfair Display', serif;">
                     Hechas hoy,
                     <br />
@@ -234,13 +234,13 @@
                     </span>
                 </h2>
 
-                <p class="text-[#8a6a50] leading-relaxed mb-4">
+                <p class="text-tinta-suave leading-relaxed mb-4">
                     En Los Trigales elaboramos nuestras pastas frescas todos los días,
                     cuidando cada masa, cada relleno y cada detalle para que disfrutes
                     productos recién hechos, con sabor casero y calidad artesanal.
                 </p>
 
-                <p class="text-[#8a6a50] leading-relaxed mb-8">
+                <p class="text-tinta-suave leading-relaxed mb-8">
                     Ravioles, tallarines, ñoquis, canelones y muchas variedades más,
                     preparadas para acompañar almuerzos familiares, cenas especiales o
                     cualquier momento en el que quieras comer rico.
@@ -259,7 +259,7 @@
                     </a>
 
                     <a routerLink="/contacto"
-                        class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#b5451b]/40 text-[#2c1a0e] text-xs uppercase tracking-widest hover:border-[#b5451b] hover:text-[#b5451b] transition-colors duration-200 rounded-sm">
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-acento/40 text-tinta text-xs uppercase tracking-widest hover:border-acento hover:text-acento transition-colors duration-200 rounded-sm">
 
                         Consultar
 

@@ -1,5 +1,5 @@
 <footer class="bg-[#2c1a0e] py-10 px-4 md:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
         <!-- Logo -->
 
         <div class="flex items-center gap-3">
@@ -12,7 +12,7 @@
                     Los Trigales
                 </span>
 
-                <span class="text-[#8a6a50] text-xs block leading-none tracking-widest uppercase">
+                <span class="text-tinta-suave text-xs block leading-none tracking-widest uppercase">
                     Una Pasta Diferente
                 </span>
             </div>
@@ -20,18 +20,18 @@
 
         <!-- Texto -->
 
-        <p class="text-[#8a6a50] text-xs text-center">
+        <p class="text-tinta-suave text-xs text-center">
             © 2026 Los Trigales · Fábrica de Pastas ·
             Buenos Aires, Argentina
         </p>
 
         <!-- Navegación -->
 
-        <div class="flex gap-6">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
             @for (item of links; track item.label) {
 
             <a [routerLink]="item.href"
-                class="text-[#8a6a50] text-xs hover:text-[#f7f0e6] transition-colors uppercase tracking-wider">
+                class="text-tinta-suave text-xs hover:text-[#f7f0e6] transition-colors uppercase tracking-wider">
                 {{ item.label }}
             </a>
 

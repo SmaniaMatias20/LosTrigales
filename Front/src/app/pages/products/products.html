@@ -1,96 +1,105 @@
-<div class="bg-[#f7f0e6] min-h-screen pt-16">
+<div class="bg-fondo min-h-screen pt-16">
 
     <!-- HEADER -->
-    <div class="bg-[#fff8ef] border-b border-[#2c1a0e]/8 py-12 px-4 md:px-8">
+    <div class="bg-superficie border-b border-tinta/8 py-8 md:py-12 px-4 md:px-8">
         <div class="max-w-7xl mx-auto">
-            <p class="text-[#b5451b] text-xs uppercase tracking-widest mb-2">
+            <p class="text-acento text-xs uppercase tracking-widest mb-2">
                 Catálogo
             </p>
 
-            <h1 class="text-4xl md:text-5xl text-[#2c1a0e]" style="font-family: 'Playfair Display', serif">
+            <h1 class="text-4xl md:text-5xl text-tinta" style="font-family: 'Playfair Display', serif">
                 Nuestras Pastas
             </h1>
 
-            <p class="text-[#8a6a50] mt-3 max-w-xl text-sm leading-relaxed">
+            <p class="text-tinta-suave mt-3 max-w-xl text-sm leading-relaxed">
                 Elaboradas fresco cada día. Sin conservantes, sin aditivos.
                 Solo ingredientes seleccionados y la receta de siempre.
             </p>
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 md:px-8 py-10">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-10">
 
         <!-- FILTROS -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div id="catalogo" class="scroll-mt-20 flex flex-col md:flex-row md:items-center gap-3 mb-4">
 
-            <div class="flex items-center gap-2 flex-wrap">
-                <span class="text-[#8a6a50] text-sm">☰</span>
+            <!-- Buscador -->
+            <div class="relative flex-1">
+                <span
+                    class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-tinta-suave text-lg pointer-events-none">search</span>
 
-                <button *ngFor="let category of categories" type="button" (click)="selectCategory(category)"
-                    class="px-4 py-1.5 text-xs uppercase tracking-wider rounded-sm border transition-colors duration-200"
-                    [ngClass]="
-            selectedCategory === category
-              ? 'bg-[#b5451b] border-[#b5451b] text-[#fff8ef]'
-              : 'border-[#2c1a0e]/15 text-[#8a6a50] hover:border-[#b5451b]/40 hover:text-[#2c1a0e] cursor-pointer'
-          ">
-                    {{ category }}
-                </button>
+                <input type="search" [(ngModel)]="searchTerm" (ngModelChange)="resetPage()"
+                    placeholder="Buscar pastas, salsas, postres..." aria-label="Buscar productos"
+                    class="w-full bg-superficie border border-tinta/12 text-tinta placeholder:text-tinta-suave/70 text-sm pl-10 pr-3 py-2.5 rounded-sm focus:outline-none focus:border-acento/40" />
             </div>
 
-            <select [(ngModel)]="sortBy"
-                class="bg-[#fff8ef] border border-[#2c1a0e]/12 text-[#8a6a50] text-xs px-3 py-2 rounded-sm focus:outline-none focus:border-[#b5451b]/40 cursor-pointer">
-                <option value="default">Ordenar por defecto</option>
-                <option value="az">Nombre: A-Z</option>
-                <option value="za">Nombre: Z-A</option>
-            </select>
+            <div class="grid grid-cols-2 md:flex gap-3">
+                <select [(ngModel)]="selectedCategory" (ngModelChange)="resetPage()" aria-label="Categoría"
+                    class="bg-superficie border border-tinta/12 text-tinta-suave text-xs px-3 py-2.5 rounded-sm focus:outline-none focus:border-acento/40 cursor-pointer">
+                    <option *ngFor="let category of categories" [value]="category">
+                        {{ category === 'Todos' ? 'Todas las categorías' : category }}
+                    </option>
+                </select>
+
+                <select [(ngModel)]="sortBy" (ngModelChange)="resetPage()" aria-label="Ordenar"
+                    class="bg-superficie border border-tinta/12 text-tinta-suave text-xs px-3 py-2.5 rounded-sm focus:outline-none focus:border-acento/40 cursor-pointer">
+                    <option value="default">Ordenar por defecto</option>
+                    <option value="az">Nombre: A-Z</option>
+                    <option value="za">Nombre: Z-A</option>
+                </select>
+            </div>
         </div>
 
-        <!-- PRODUCTOS -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <p *ngIf="filteredProducts.length > 0" class="text-tinta-suave text-xs mb-6">
+            Mostrando {{ rangeStart }}–{{ rangeEnd }} de {{ filteredProducts.length }} productos
+        </p>
 
-            <div *ngFor="let product of filteredProducts"
-                class="group bg-[#fff8ef] border rounded-sm overflow-hidden transition-all duration-300 animate-fade-up"
+        <!-- PRODUCTOS -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+
+            <div *ngFor="let product of paginatedProducts"
+                class="group bg-superficie border rounded-sm overflow-hidden transition-all duration-300 animate-fade-up"
                 [ngClass]="
           product.stock
-            ? 'border-[#2c1a0e]/8 hover:border-[#b5451b]/30 hover:shadow-md'
-            : 'border-[#2c1a0e]/8 opacity-65'
+            ? 'border-tinta/8 hover:border-acento/30 hover:shadow-md'
+            : 'border-tinta/8 opacity-65'
         ">
 
                 <!-- IMAGEN -->
-                <div class="relative overflow-hidden aspect-square bg-[#ede0ce]">
+                <div class="relative overflow-hidden aspect-square bg-superficie-2">
                     <img [src]="product.image" [alt]="product.name" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-500"
                         [ngClass]="product.stock ? 'group-hover:scale-105' : 'grayscale'" />
 
-                    <div class="absolute top-3 left-3 flex gap-2">
+                    <div class="absolute top-2 left-2 sm:top-3 sm:left-3 flex flex-wrap gap-1 sm:gap-2">
                         <span
-                            class="text-[10px] uppercase tracking-widest text-[#b5451b] bg-[#fff8ef]/90 px-2 py-1 rounded-sm">
+                            class="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-acento bg-superficie/90 px-2 py-1 rounded-sm">
                             {{ product.category }}
                         </span>
 
                         <span *ngIf="!product.stock"
-                            class="text-[10px] uppercase tracking-widest text-[#8a6a50] bg-[#ede0ce]/90 px-2 py-1 rounded-sm">
+                            class="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-tinta-suave bg-superficie-2/90 px-2 py-1 rounded-sm">
                             Agotado
                         </span>
                     </div>
                 </div>
 
                 <!-- INFO -->
-                <div class="p-4">
-                    <h3 class="text-[#2c1a0e] text-sm leading-snug" style="font-family: 'Playfair Display', serif">
+                <div class="p-3 sm:p-4">
+                    <h3 class="text-tinta text-sm leading-snug" style="font-family: 'Playfair Display', serif">
                         {{ product.name }}
                     </h3>
 
-                    <!-- <p class="text-[#8a6a50] text-xs mt-1">
+                    <!-- <p class="text-tinta-suave text-xs mt-1">
                         {{ product.weight }}
                     </p> -->
 
-                    <p class="text-[#8a6a50]/80 text-xs mt-2 leading-relaxed line-clamp-2">
+                    <p class="text-tinta-suave/80 text-xs mt-2 leading-relaxed line-clamp-2">
                         {{ product.description }}
                     </p>
 
                     <!-- <div class="flex items-center justify-between mt-4">
-                        <span class="text-[#b5451b] text-lg" style="font-family: 'Playfair Display', serif">
+                        <span class="text-acento text-lg" style="font-family: 'Playfair Display', serif">
                             ${{ product.price.toLocaleString('es-AR') }}
                         </span>
 
@@ -98,8 +107,8 @@
                             class="flex items-center gap-1.5 px-3 py-1.5 text-xs uppercase tracking-wider rounded-sm transition-colors duration-200"
                             [ngClass]="
                 product.stock
-                  ? 'bg-[#b5451b]/10 border border-[#b5451b]/30 text-[#2c1a0e] hover:bg-[#b5451b] hover:border-[#b5451b] hover:text-[#fff8ef]'
-                  : 'bg-[#ede0ce] border border-[#ede0ce] text-[#c8b49a] cursor-not-allowed'
+                  ? 'bg-[#b5451b]/10 border border-acento/30 text-tinta hover:bg-[#b5451b] hover:border-acento hover:text-[#fff8ef]'
+                  : 'bg-superficie-2 border border-superficie-2 text-[#c8b49a] cursor-not-allowed'
               ">
                             <span>🛒</span>
                             {{ product.stock ? 'Agregar' : 'Sin stock' }}
@@ -111,10 +120,47 @@
 
         <!-- SIN RESULTADOS -->
         <div *ngIf="filteredProducts.length === 0" class="text-center py-20">
-            <p class="text-[#8a6a50] text-sm">
-                No hay productos en esta categoría.
+            <p class="text-tinta-suave text-sm">
+                No encontramos productos{{ searchTerm.trim() ? ' para "' + searchTerm.trim() + '"' : ' en esta categoría' }}.
             </p>
+
+            <button type="button" (click)="clearFilters()"
+                class="mt-4 px-4 py-2 text-xs uppercase tracking-wider border border-acento/40 text-acento rounded-sm hover:bg-[#b5451b] hover:text-[#fff8ef] transition-colors duration-200 cursor-pointer">
+                Ver todos los productos
+            </button>
         </div>
+
+        <!-- PAGINACIÓN -->
+        <nav *ngIf="totalPages > 1" class="flex items-center justify-center gap-1 sm:gap-2 mt-10"
+            aria-label="Paginación">
+
+            <button type="button" (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1"
+                aria-label="Página anterior"
+                class="w-9 h-9 flex items-center justify-center border border-tinta/15 text-tinta-suave rounded-sm transition-colors duration-200 enabled:hover:border-acento/40 enabled:hover:text-tinta enabled:cursor-pointer disabled:opacity-40">
+                <span class="material-icons text-lg">chevron_left</span>
+            </button>
+
+            <ng-container *ngFor="let page of pages">
+                <span *ngIf="page === '…'" class="w-6 text-center text-tinta-suave text-sm">…</span>
+
+                <button *ngIf="page !== '…'" type="button" (click)="goToPage(+page)"
+                    [attr.aria-current]="page === currentPage ? 'page' : null"
+                    class="w-9 h-9 flex items-center justify-center border text-sm rounded-sm transition-colors duration-200"
+                    [ngClass]="
+            page === currentPage
+              ? 'bg-[#b5451b] border-[#b5451b] text-[#fff8ef]'
+              : 'border-tinta/15 text-tinta-suave hover:border-acento/40 hover:text-tinta cursor-pointer'
+          ">
+                    {{ page }}
+                </button>
+            </ng-container>
+
+            <button type="button" (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages"
+                aria-label="Página siguiente"
+                class="w-9 h-9 flex items-center justify-center border border-tinta/15 text-tinta-suave rounded-sm transition-colors duration-200 enabled:hover:border-acento/40 enabled:hover:text-tinta enabled:cursor-pointer disabled:opacity-40">
+                <span class="material-icons text-lg">chevron_right</span>
+            </button>
+        </nav>
 
     </div>
 </div>

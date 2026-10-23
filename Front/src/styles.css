@@ -1,2 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
+
+/* Colores que cambian con el tema (modo claro por defecto) */
+@theme {
+  --color-fondo: #f7f0e6;
+  --color-superficie: #fff8ef;
+  --color-superficie-2: #ede0ce;
+  --color-tinta: #2c1a0e;
+  --color-tinta-suave: #8a6a50;
+  --color-acento: #b5451b;
+}
+
+/* Modo oscuro */
+.dark {
+  color-scheme: dark;
+  --color-fondo: #17110c;
+  --color-superficie: #221811;
+  --color-superficie-2: #2e2118;
+  --color-tinta: #f3e8da;
+  --color-tinta-suave: #b89a7e;
+  --color-acento: #e0703f;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
